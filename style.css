@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #080808;
+    color: white;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(Images/nightred.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 160px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #990131;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+} 
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+    /*TWEAK BELOW FOR WELCOME TEXT TO ENSURE ITS ALL LEGIBLE*/
+    /*-webkit-text-stroke: 0.09375rem #000000;*/
+    /* -o-text-stroke: 0.09375rem #ffffff; */
+    text-shadow: 0.09375rem #0d1b1e;
+    color: #ffffff;
+    /*letter-spacing: 6px; */
+    text-shadow: 5px 5px 0px #000000;
+}
+.header-text h1 span{
+    color: #990131;
+}
+
+/*------------ about me---------*/
+#about{
+    padding: 80px 0;
+    color: white;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/*
+.portrait{
+    width: 800px;
+}
+*/
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.subtitle{
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+    
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #990131;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 100%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 16px 0;
+}
+/* Right now this does't work and needs to be fixed 
+    Trying to get bullet points to be visible would make it more visible
+*/
+.tab-contents ul li::marker{
+    
+    color: #990131;
+}
+.tab-contents ul li span{
+    color: #ffffff;
+    font-size: 25px;
+    /*-webkit-text-stroke: 0.02375rem #000000;*/
+    text-shadow: 5px 5px 5px #df0147;
+}
+
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+.collapsible{
+    max-width: 450px;
+    overflow: hidden;
+    font-weight: 500;
+   
+}
+.collapsible input{
+    display: none;
+}
+.collapsible label{
+    position: relative;
+    font-weight: 600;
+    background: white;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
+    color: #990131;
+    display: block;
+    margin-bottom: 10px;
+    cursor:  pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.collapsible label::after{
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 18px;
+    height: 18px;
+    background: url("Images/arrow.svg") no-repeat center center / contain;
+    transition: all 0.3s ease;
+}
+
+.collapsible input:checked + label:after{
+    transform: rotate(90deg);
+}
+
+.collapsible-text{
+    color: #000000;
+    max-height: 1px;
+    overflow: hidden;
+    border-radius: 2px;
+    line-height: 1.4;
+    position: relative;
+    top: -100%;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    padding: 15px;
+    margin-bottom: 20px;
+
+
+}
+input[type="checkbox"]:checked + label + .collapsible-text {
+    display: block; /* Shows the collapsible content when the checkbox is checked */
+    max-height: none; /* Removes any height restriction */
+}
+.collapsible input:checked ~ .collapsible-text{
+    max-height: 300px;
+    padding-bottom: 5px;
+    background: #fff;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08); 
+    opacity: 1;
+    top: 0;
+}
+.collapsible-text h2{
+    margin-bottom: 10px;
+    padding: 15px 15px 0;
+    color: #990131;
+}
+.collapsible-text p{
+    color: #000000;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.collapsible-text li {
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+
+/*  Socials Stuff   */
+
+#socials {
+    padding: 30px 0;
+}
+
+.socials-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.socials-list a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    transition: background 0.5s ease, transform 0.7s ease;
+}
+
+.socials-list div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    text-align: center;
+    transition: background 0.5s ease, transform 0.5s ease;
+}
+
+.socials-list div i {
+    font-size: 100px;
+    margin-bottom: 30px;
+}
+
+.socials-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.socials-list a:hover div {
+    background: #990131;
+    transform: translateY(-10px);
+}
