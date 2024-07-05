@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    font-family: 'Quicksand', sans-serif;
 }
 
 body{
@@ -62,7 +62,7 @@ nav ul li a::after{
     content: '';
     width: 0%;
     height: 3px;
-    background: #ff7da6;
+    background: #702bf0;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -85,7 +85,7 @@ nav ul li a:hover::after{
     text-shadow: 5px 5px 0px #000000;
 }
 .header-text h1 span{
-    color: #f02b6a;
+    color: #702bf0;
 }
 
 /*------------ about me---------*/
@@ -137,7 +137,7 @@ nav ul li a:hover::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #990131;
+    background: #702bf0;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -155,13 +155,13 @@ nav ul li a:hover::after{
 */
 .tab-contents ul li::marker{
     
-    color: #990131;
+    color: #702bf0;
 }
 .tab-contents ul li span{
     color: #ffffff;
     font-size: 25px;
     /*-webkit-text-stroke: 0.02375rem #000000;*/
-    text-shadow: 5px 5px 5px #df0147;
+    text-shadow: 5px 5px 5px #702bf0;
 }
 
 .tab-contents{
@@ -185,7 +185,7 @@ nav ul li a:hover::after{
     font-weight: 600;
     background: white;
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .1), 0 4px 11px 0 rgba(0, 0, 0, .08);
-    color: #990131;
+    color: #702bf0;
     display: block;
     margin-bottom: 10px;
     cursor:  pointer;
@@ -238,7 +238,7 @@ input[type="checkbox"]:checked + label + .collapsible-text {
 .collapsible-text h2{
     margin-bottom: 10px;
     padding: 15px 15px 0;
-    color: #990131;
+    color: #702bf0;
 }
 .collapsible-text p{
     color: #000000;
@@ -297,6 +297,42 @@ input[type="checkbox"]:checked + label + .collapsible-text {
 }
 
 .socials-list a:hover div {
-    background: #990131;
+    background: #702bf0;
     transform: translateY(-10px);
+}
+
+
+/* Scroll list */
+
+
+.listing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px; /* Adjust margin as needed */
+}
+
+.listings-col-2 {
+    flex-basis: calc(50% - 20px); /* Adjust width to fit two columns with gap */
+    margin-bottom: 20px; /* Add margin between listings */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Initial position for listings */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.listings-col-2.scrolled {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to final position */
+}
+
+.listing-text {
+    font-size: 24px; /* Adjust font size */
+    font-weight: 600;
+    color: white;
+    margin-bottom: 10px; /* Add bottom margin */
+}
+
+.listing-image img {
+    width: 100%; /* Ensure image fills its container */
+    border-radius: 15px;
 }
