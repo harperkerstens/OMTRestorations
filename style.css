@@ -1,17 +1,19 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    
 }
+
 body{
     background: #080808;
     color: white;
+    font-family: 'Quicksand', sans-serif;
 }
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(Images/nightred.jpg);
+    background-image: url(Images/IMG_2816.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -22,12 +24,17 @@ body{
 nav{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     flex-wrap: wrap;
+}
+nav ul{
+    display: flex;
+    padding: 0;
+    padding-top: 15px;
 }
 
 .logo{
-    width: 160px;
+    width: 1000px;
 }
 
 nav ul li{
@@ -37,16 +44,25 @@ nav ul li{
 }
 
 nav ul li a {
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
-    font-size: 18px;
+    font-size: 25px;
+    font-weight: 600;
     position: relative;
+    /*text-shadow: 0.09375rem #ffffff;*/
+    /*letter-spacing: 6px; */
+   /* text-shadow: 0px 0px 8px #000000;*/
+    text-shadow: 0px 0px 5px #000000,
+    2px 2px 5px #000000, /* First shadow */
+    4px 4px 5px #000000, /* Second shadow */
+    6px 6px 5px #000000, /* Third shadow */
+    8px 8px 5px #000000; /* Fourth shadow */
 }
 nav ul li a::after{
     content: '';
     width: 0%;
     height: 3px;
-    background: #990131;
+    background: #ff7da6;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -56,22 +72,20 @@ nav ul li a:hover::after{
     width: 100%;
 }
 .header-text{
-    margin-top: 20%;
+    margin-top: 35%;
     font-size: 30px;
 }
 .header-text h1{
     font-size: 60px;
-    margin-top: 20px;
-    /*TWEAK BELOW FOR WELCOME TEXT TO ENSURE ITS ALL LEGIBLE*/
-    /*-webkit-text-stroke: 0.09375rem #000000;*/
-    /* -o-text-stroke: 0.09375rem #ffffff; */
+    margin-bottom: 20px;
+
     text-shadow: 0.09375rem #0d1b1e;
     color: #ffffff;
     /*letter-spacing: 6px; */
     text-shadow: 5px 5px 0px #000000;
 }
 .header-text h1 span{
-    color: #990131;
+    color: #f02b6a;
 }
 
 /*------------ about me---------*/
