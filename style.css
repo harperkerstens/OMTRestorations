@@ -314,15 +314,22 @@ input[type="checkbox"]:checked + label + .collapsible-text {
 
 .listings-col-2 {
     flex-basis: calc(50% - 20px); /* Adjust width to fit two columns with gap */
-    margin-bottom: 20px; /* Add margin between listings */
+    margin-bottom: 50px; /* Add margin between listings */
     opacity: 0; /* Initially hidden */
     transform: translateY(50px); /* Initial position for listings */
     transition: opacity 0.5s ease, transform 0.5s ease;
+
+    will-change: transform, box-shadow; /* Optimize for smoother animations */
 }
 
 .listings-col-2.scrolled {
     opacity: 1; /* Fully visible */
     transform: translateY(0); /* Move to final position */
+}
+
+.listings-col-2:hover {
+    transform: translateY(-15px); /* Move up slightly on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow to create depth */
 }
 
 .listing-text {
@@ -337,4 +344,32 @@ input[type="checkbox"]:checked + label + .collapsible-text {
     border-radius: 15px;
 }
 
+
 /* Gallery Section */
+
+.swiper{
+    width:  35%;
+    height: 35%;
+    
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+    color: #702bf0; /* Change to desired arrow color, white for consistency */
+}
+
+/* Swiper Pagination Bullet Active Color */
+.swiper-pagination-bullet-active {
+    color: #702bf0; /* Change to desired active bullet color, white for consistency */
+}
+
+/* Optional: Change Swiper Pagination Bullet Color */
+.swiper-pagination-bullet {
+    background: #CCCCCC; /* Change to desired inactive bullet color, light gray as an example */
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 20px;
+}

@@ -12,15 +12,23 @@
 
     <!-- Below code links to Style.css file  --> 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="path/to/your/custom.css" />
+   
      
     <!-- Add Fontawesome.com link below for icon -->
     <script src="https://kit.fontawesome.com/7e8c697c69.js" crossorigin="anonymous"></script>
 
-   
+    <!-- Add Swiper CSS -->
+
+                        <!-- Might need to remove the bundle part from all four below-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
     <!-- Move the script to the end of the body tag -->
     </body>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     </html>
 
 </head>
@@ -71,54 +79,35 @@
 
 
         <!--Gallery-->
-    <!-- 
-        <div class="container swiper">
-            <div class="slider-wrapper">
-              <div class="card-list swiper-wrapper">
-                <div class="card-item swiper-slide">
-                  <img src="Images/listingOne.jpg" alt="User Image" class="user-image">
-                  <h2 class="user-name">James Wilson</h2>
-                  <p class="user-profession">Software Developer</p>
-                  <button class="message-button">Message</button>
+            <div id="gallery" >
+                <h1>Gallery</h1>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="Images/listingOne.jpg" class="gallery-image">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="Images/listingTwo.jpg" class="gallery-image">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="Images/listingThree.jpg" class="gallery-image">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="Images/listingFour.PNG" class="gallery-image">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="Images/listingSix.PNG" class="gallery-image">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="Images/listingSeven.PNG" class="gallery-image">
+                        </div> 
+                    </div>
+                     <!--<div class="swiper-pagination"></div>--->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
-                <div class="card-item swiper-slide">
-                  <img src="Images/listingTwo.jpg" alt="User Image" class="user-image">
-                  <h2 class="user-name">Sarah Johnson</h2>
-                  <p class="user-profession">Graphic Designer</p>
-                  <button class="message-button">Message</button>
-                </div>
-                <div class="card-item swiper-slide">
-                  <img src="Images/listingThree.jpg" alt="User Image" class="user-image">
-                  <h2 class="user-name">Michael Brown</h2>
-                  <p class="user-profession">Project Manager</p>
-                  <button class="message-button">Message</button>
-                </div>
-                <div class="card-item swiper-slide">
-                  <img src="Images/listingFour.PNG" alt="User Image" class="user-image">
-                  <h2 class="user-name">Emily Davis</h2>
-                  <p class="user-profession">Marketing Specialist</p>
-                  <button class="message-button">Message</button>
-                </div>
-                <div class="card-item swiper-slide">
-                  <img src="Images/listingFive.PNG" alt="User Image" class="user-image">
-                  <h2 class="user-name">Christopher Garcia</h2>
-                  <p class="user-profession">Data Scientist</p>
-                  <button class="message-button">Message</button>
-                </div>
-                <div class="card-item swiper-slide">
-                  <img src="Images/listingSix.PNG" alt="User Image" class="user-image">
-                  <h2 class="user-name">Richard Wilson</h2>
-                  <p class="user-profession">Product Designer</p>
-                  <button class="message-button">Message</button>
-                </div>
-              </div>
-              <div class="swiper-pagination"></div>
-              <div class="swiper-slide-button swiper-button-prev"></div>
-              <div class="swiper-slide-button swiper-button-next"></div>
             </div>
-          </div>
-            -->
-
+            
         <!--Listings  Section-->
         <div id="listings" class="scroll-section">
             <h1>Listings</h1> 
@@ -126,43 +115,24 @@
 
                     <div class="listings-col-2 scroll-image">
                         <div class="listing-text">Madame Garderobe</div>
-                        <div class="listing-image"><img src="Images/listingOne.jpg" class="listing1"></div>
+                        <div class="listing-image">
+                            <a href="https://www.facebook.com/marketplace/item/1142080557059500/">
+                            <img src="Images/listingOne.jpg" class="listing1">
+                            </a>
+                        </div>
                     </div>
 
-                    <div class="listings-col-2 scroll-image">
-                        <div class="listing-text">Oak Sideboard</div>
-                        <div class="listing-image"><img src="Images/listingTwo.jpg" class="listing1"></div>
-                    </div>
 
-                    <div class="listings-col-2 scroll-image">
-                        <div class="listing-text">Boho Beauty</div>
-                        <div class="listing-image"><img src="Images/listingThree.jpg" class="listing1"></div>
-                    </div>
 
                     <div class="listings-col-2 scroll-image">
                         <div class="listing-text">Dressing table/vanity</div>
-                        <div class="listing-image"><img src="Images/listingFour.PNG" class="listing1"></div>
+                        <div class="listing-image">
+                            <a href="https://www.facebook.com/marketplace/item/341415498726250/">
+                            <img src="Images/listingFour.PNG" class="listing1">
+                        </a>
+                        </div>
                     </div>
 
-                    <div class="listings-col-2 scroll-image">
-                        <div class="listing-text">Mid-century Maven</div>
-                        <div class="listing-image"><img src="Images/listingFive.PNG" class="listing1"></div>
-                    </div>
-
-                    <div class="listings-col-2 scroll-image">
-                        <div class="listing-text">Antique Tallboy</div>
-                        <div class="listing-image"><img src="Images/listingSix.PNG" class="listing1"></div>
-                    </div>
-
-                    <div class="listings-col-2 scroll-image">
-                        <div class="listing-text">White Dresser</div>
-                        <div class="listing-image"><img src="Images/listingSeven.PNG" class="listing1"></div>
-                    </div>
-
-                    <div class="listings-col-2 scroll-image">
-                        <div class="listing-text">Listing 8</div>
-                        <div class="listing-image"><img src="Images/MilkTruck.png" class="listing1"></div>
-                    </div>
 
                 </div>
             </div>   
@@ -192,7 +162,33 @@
         </div>
     </div>
     <script src="script.js"></script>
-    
+    <script>const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      
+        // And if we need scrollbar
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      });
+      </script>
     
 
 </body>
