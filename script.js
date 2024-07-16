@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     const scrollElements = document.querySelectorAll('.scroll-section .listings-col-2');
 

@@ -336,3 +336,5 @@ input[type="checkbox"]:checked + label + .collapsible-text {
     width: 100%; /* Ensure image fills its container */
     border-radius: 15px;
 }
+
+/* Gallery Section */
