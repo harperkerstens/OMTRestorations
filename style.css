@@ -1,5 +1,5 @@
 *{
-    margin: 0;
+    margin: 25;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
@@ -98,6 +98,9 @@ nav ul li a:hover::after{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+.subtitle span{
+    color: #702bf0;
 }
 /*
 .portrait{
@@ -277,7 +280,7 @@ input[type="checkbox"]:checked + label + .collapsible-text {
     align-items: center;
     justify-content: center;
     background: #262626;
-    padding: 40px;
+    padding: 15px;
     font-size: 13px;
     font-weight: 300;
     border-radius: 10px;
